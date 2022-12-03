@@ -16,6 +16,12 @@ const AddNote = ({ handleAddNote }) => {
         }
     }
 
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter" && e.ctrlKey) {
+            handleSaveClick();
+        }
+    }
+
     return (
         <div className="note new">
             <textarea 
@@ -24,6 +30,7 @@ const AddNote = ({ handleAddNote }) => {
             placeholder="Type to add a note..."
             value={noteText}
             onChange={handleChange}
+            onKeyDown={(e) => handleKeyPress(e)}
             ></textarea>
             <div className="note-footer">
                 <small>{charLimit - noteText.length} Remaining</small>

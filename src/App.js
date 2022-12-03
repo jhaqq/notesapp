@@ -49,9 +49,6 @@ const App = () => {
 		);
 	}, [notes]);
 
-
-
-
   const addNote = (text) => {
     const date = new Date();
     const newNote = {
@@ -71,7 +68,10 @@ const App = () => {
   return (
     <div className={`${darkMode && 'dark-mode'}`}>
       <div className='container'>
-      <Header handleDarkMode={setDarkMode}/>
+      <Header 
+	    handleCount={notes.length}
+	  	handleDarkMode={setDarkMode}
+		/>
       <Search handleSearchNote={setSearchText}/>
       <NotesList 
         notes={notes.filter((note) => 

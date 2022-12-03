@@ -18,6 +18,14 @@ code {
   justify-content: space-between;
 }
 
+.name-and-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12%;
+  min-width: 12%;
+}
+
 .dark-mode {
   background-color: #24283B;
 }
@@ -25,7 +33,9 @@ code {
 .dark-mode h1 {
   color: white;
 }
+
 .container {
+  flex-direction: column;
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
@@ -96,14 +106,26 @@ textarea:focus {
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 1.5em;
-  flex:1;
+  flex:0 1 0;
 }
 
 .search input {
+  display: flex;
   border: none;
   background-color: rgb(233,233,233);
+  flex: 1;
 }
 
 .search input:focus {
   outline: none;
 }
+
+.save.count {
+ margin-left: 7px;
+ margin-top: 7px;
+}
+
+#toggle {
+  margin-top: 10px;
+}
+

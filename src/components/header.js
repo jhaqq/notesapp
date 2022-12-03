@@ -1,11 +1,19 @@
 import React from "react";
+import { MdTransferWithinAStation } from "react-icons/md";
+import Note from "./note";
 
-const Header = ({ handleDarkMode }) => {
+const Header = ({ handleDarkMode, handleCount }) => {
     return (
         <div className="header">
-            <h1>Notes</h1>
+            <div className="name-and-counter">
+                <h1>Notes</h1>
+                <span 
+                className="save count"
+                >{handleCount}</span>
+            </div>
             <button 
             className="save"
+            id="toggle"
             onClick={() => 
                 handleDarkMode(
                     (previousDarkMode) => !previousDarkMode
