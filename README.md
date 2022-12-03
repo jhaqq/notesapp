@@ -11,6 +11,9 @@ This project will be similar to the Windows "Sticky Notes" app, where users are 
     Counter for notes,
     Hotkey for note saving (ctrl + enter, added ctrl so that notes could still have newlines if desired.)
 
+    TODO:
+    Add edit feature.
+
 all with a dynamic frontend and user interface.
 
 This application was made using React and CSS.
